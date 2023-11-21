@@ -1,22 +1,7 @@
 import './App.css'
+import { ShopItem } from './components/ShopItem.jsx'
 
 function App() {
-
-  const ShopItemFunc = () => 
-  <div class="main-content">
-    <h2>{item.brand}</h2>
-    <h1>{item.title}</h1>
-    <h3>{item.description}</h3>
-    <div class="description">
-      {item.descriptionFull}
-    </div>
-    <div class="highlight-window mobile"><div class="highlight-overlay"></div></div>
-    <div class="divider"></div>
-    <div class="purchase-info">
-      <div class="price">{item.currency}{item.price.toFixed(2)}</div>
-      <button>Добавить в корзину</button>
-    </div>
-  </div>
 
   const item = {
     brand: 'Tiger of Sweden',
@@ -35,7 +20,7 @@ function App() {
         <div className='highlight-overlay'></div>
       </div>
       <div className="window">
-        <ShopItemFunc item={item} />
+        <ShopItem param={item} />
       </div>
     </div>
   )
